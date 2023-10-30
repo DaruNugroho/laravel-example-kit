@@ -16,7 +16,7 @@
                             </h3>
                         </div>
 
-                        <form class="form-horizontal" wire:submit="{{ $id ? "update('$id')" : 'store' }}">
+                        <form class="form-horizontal">
                             <div class="card-body">
 
                                 <p class="card-text">You can use this form for create, update, and delete data. to clear
@@ -69,18 +69,20 @@
                             </div>
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-info float-right">
+                                <button type="button" wire:click.prevent="{{ $id ? "update('$id')" : 'store' }}"
+                                    class="btn btn-info float-right">
                                     @if ($id)
                                         Update Data
                                     @else
                                         Save Data
                                     @endif
                                 </button>
-                                <a wire:click.prevent="resetForm" class="btn btn-default">Reset</a>
                                 @if ($id)
                                     <a wire:click.prevent="delete('{{ $id }}')" wire:confirm="are u sure ?"
                                         class="btn btn-danger ml-2">Delete</a>
                                 @endif
+                                <a wire:click.prevent="resetForm" class="btn btn-default">Reset</a>
+
                             </div>
 
                         </form>

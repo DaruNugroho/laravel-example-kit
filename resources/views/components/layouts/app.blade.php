@@ -103,7 +103,7 @@
                             <a href="#" class="dropdown-item">
 
                                 <div class="media">
-                                    <img src="../assets/images/user1-128x128.jpeg" alt="User Avatar"
+                                    <img src="{{ asset('assets/images/user1-128x128.jpeg') }}" alt="User Avatar"
                                         class="img-size-50 mr-3 img-circle">
                                     <div class="media-body">
                                         <h3 class="dropdown-item-title">
@@ -122,7 +122,7 @@
                             <a href="#" class="dropdown-item">
 
                                 <div class="media">
-                                    <img src="../assets/images/user1-128x128.jpeg" alt="User Avatar"
+                                    <img src="{{ asset('assets/images/user1-128x128.jpeg') }}" alt="User Avatar"
                                         class="img-size-50 img-circle mr-3">
                                     <div class="media-body">
                                         <h3 class="dropdown-item-title">
@@ -141,7 +141,7 @@
                             <a href="#" class="dropdown-item">
 
                                 <div class="media">
-                                    <img src="../assets/images/user1-128x128.jpeg" alt="User Avatar"
+                                    <img src="{{ asset('assets/images/user1-128x128.jpeg') }}" alt="User Avatar"
                                         class="img-size-50 img-circle mr-3">
                                     <div class="media-body">
                                         <h3 class="dropdown-item-title">
@@ -200,28 +200,40 @@
         {{ $slot }}
 
         <aside class="control-sidebar control-sidebar-dark">
-
         </aside>
 
-
         <footer class="main-footer">
-
             <div class="float-right d-none d-sm-inline">
                 Anything you want
             </div>
-
             <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
             reserved.
         </footer>
     </div>
 
+    @livewireScripts
 
+    <script type="text/javascript">
+        Livewire.on('closeDialog', dialogId => {
+            $(`#${dialogId}`).modal('hide');
+        })
 
-    {{-- <script src="../../plugins/jquery/jquery.min.js"></script>
+        Livewire.on('notify', event => {
 
-    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+            var Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000
+            });
+            Toast.fire({
+                icon: event[1] || 'success',
+                title: event[0]
+            })
 
-    <script src="../../dist/js/adminlte.min.js?v=3.2.0"></script> --}}
+        });
+    </script>
+
 </body>
 
 </html>
