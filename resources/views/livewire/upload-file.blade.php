@@ -39,7 +39,8 @@
                                         @endif
                                         <div class="input-group">
                                             <div class="custom-file">
-                                                <input type="file" wire:model="photo_temp"
+                                                <input accept="image/png, image/jpeg, image/jpg" type="file"
+                                                    wire:model="photo_temp"
                                                     class="custom-file-input @error('photo') is-invalid @enderror"
                                                     id="photo">
                                                 <label class="custom-file-label" for="photo">Choose
