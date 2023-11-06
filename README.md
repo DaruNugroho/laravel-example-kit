@@ -16,4 +16,4 @@ This is laravel example kit, hope it can help you. (Laravel version : ^10.10)
 - Link storage folder to public   : `php artisan storage:link`
 - Run host : `php artisan serve`
 - Open new terminal & run dev assets : `npm run dev`
-- open in browser, by default on [localhost:8000](http://localhost:8000)
+- Open in browser, by default on [localhost:8000](http://localhost:8000)
