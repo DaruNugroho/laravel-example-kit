@@ -83,7 +83,7 @@
 
                                 <div class="form-group row">
                                     <label for="expiry_date" class="col-sm-4 col-form-label text-right">Expiry
-                                        Date</label>
+                                        Date </label>
                                     <div class="col-sm-8">
                                         <input wire:model="expiry_date" type="date"
                                             class="form-control @error('expiry_date') is-invalid @enderror"

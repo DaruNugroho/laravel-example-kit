@@ -20,10 +20,10 @@
 
         <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
             <div class="container">
-                <a href="{{ url('livewire/home') }}" class="navbar-brand">
+                <a href="{{ url('/') }}" class="navbar-brand">
                     {{-- <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                         class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
-                    <span class="brand-text font-weight-light">Livewire Example</span>
+                    <span class="brand-text font-weight-light">Laravel Example Kit </span>
                 </a>
                 <button class="navbar-toggler order-1" type="button" data-toggle="collapse"
                     data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
@@ -35,7 +35,7 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a href="{{ url('livewire/home') }}" class="nav-link">Home Livewire </a>
+                            <a href="{{ url('livewire/home') }}" class="nav-link">Livewire Sitemap</a>
                         </li>
 
                         <li class="nav-item dropdown">

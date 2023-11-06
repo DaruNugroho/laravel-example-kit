@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Product;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 use Str;
 use Livewire\Component;
@@ -32,12 +33,15 @@ class UploadFile extends Component
             'name'          => 'required',
             'qty'           => 'required',
             'expiry_date'   => 'required|date',
-            'photo_temp'    => 'required|file|mimes:png,jpg,jpeg|max:1024',
+            'photo_temp'    => 'nullable|file|mimes:png,jpg,jpeg|max:1024',
         ]);
 
-        // Store Photo
-        $image_name = time() . '-' . Str::slug($this->name) . '.' . $this->photo_temp->getClientOriginalExtension();
-        $image_link = $this->photo_temp->storeAs('uploads/images', $image_name, 'public');
+        $image_link = null;
+        if ($this->photo_temp) {
+            // Store Photo
+            $image_name = time() . '-' . Str::slug($this->name) . '.' . $this->photo_temp->getClientOriginalExtension();
+            $image_link = $this->photo_temp->storeAs('uploads/images', $image_name, 'public');
+        }
 
         Product::create([
             'name' => $this->name,
@@ -73,6 +77,7 @@ class UploadFile extends Component
         ]);
 
         $data = Product::find($id);
+        $note = "";
 
         if ($data) {
 
@@ -83,20 +88,23 @@ class UploadFile extends Component
                 $image_link = $this->photo_temp->storeAs('uploads/images', $image_name, 'public');
 
                 // Delete Photo
-                $this->deleteFile($data->photo);
+                if ($data->photo) {
+                    $this->deleteFile($data->photo);
+                    $note = "Photo and ";
+                }
             } else {
                 $image_link = $data->photo;
             }
 
             $data->update([
-                'name' => $this->name,
-                'qty' => $this->qty,
+                'name'      => $this->name,
+                'qty'       => $this->qty,
                 'expiry_date' => $this->expiry_date,
-                'photo' => $image_link
+                'photo'     => $image_link
             ]);
         }
 
-        $this->dispatch('notify', 'Updete Successfuly');
+        $this->dispatch('notify', "$note data Updete Successfuly");
 
         $this->resetForm();
     }
@@ -114,25 +122,37 @@ class UploadFile extends Component
 
     public function deleteFile($file)
     {
+        $note = "";
         if (isset($file)) {
             try {
                 $file_name  = explode("/", $file);
                 unlink(storage_path('app/public/uploads/images/') . $file_name[2]);
+                $note  = "File Foto and";
             } catch (\Throwable $th) {
                 //throw $th;
             }
         }
-    }
 
+        $this->dispatch('notify', "$note Data Deleted !");
+    }
 
     public function resetForm()
     {
         $this->resetValidation();
         $this->reset();
+        $this->mount();
+    }
+
+    public function mount()
+    {
+        $this->name = fake()->name('male' | 'female');
+        $this->qty = 2;
+        $this->expiry_date = Carbon::now()->toDateString();
     }
 
     public function render()
     {
+
         return view('livewire.upload-file', [
             'data' => Product::paginate(12)
         ]);

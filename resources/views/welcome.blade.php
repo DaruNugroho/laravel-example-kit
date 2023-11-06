@@ -860,10 +860,14 @@
                         fill="#FF2D20" />
                 </svg>
             </div>
+            <div class="flex justify-center" style="margin-top: 20px;">
+                <h2 class="text-xl font-semibold text-gray-400 dark:text-white" style="font-size: 50px">Laravel Example
+                    Kit</h2>
+            </div>
 
             <div class="mt-16">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    <a href="https://laravel.com/docs"
+                    <a href="#"
                         class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                         <div>
                             <div
@@ -919,7 +923,7 @@
                         </svg>
                     </a>
 
-                    <a href="https://laravel-news.com"
+                    <a href="#"
                         class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                         <div>
                             <div
@@ -972,17 +976,17 @@
                                 and <a href="https://envoyer.io"
                                     class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a>
                                 help you take your projects to the next level. Pair them with powerful open source
-                                libraries like <a href="https://laravel.com/docs/billing"
+                                libraries like <a href="#/billing"
                                     class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>,
-                                <a href="https://laravel.com/docs/dusk"
+                                <a href="#/dusk"
                                     class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>,
-                                <a href="https://laravel.com/docs/broadcasting"
+                                <a href="#/broadcasting"
                                     class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>,
-                                <a href="https://laravel.com/docs/horizon"
+                                <a href="#/horizon"
                                     class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>,
-                                <a href="https://laravel.com/docs/sanctum"
+                                <a href="#/sanctum"
                                     class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>,
-                                <a href="https://laravel.com/docs/telescope"
+                                <a href="#/telescope"
                                     class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>,
                                 and more.
                             </p>
@@ -994,7 +998,7 @@
             <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
                 <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
                     <div class="flex items-center gap-4">
-                        <a href="https://github.com/sponsors/taylorotwell"
+                        <a href="#"
                             class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5"

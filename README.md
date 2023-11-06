@@ -1,18 +1,14 @@
-# Install Laravel UI
-- composer require laravel/ui
-- php artisan ui bootstrap
+# Hi Freind !
+This is laravel example kit, hope it can help you.
 
-# Install Admin LTE & Font Awesome
-  - composer require "almasaeed2010/adminlte=~3.2"
-  - composer require components/font-awesome
+# Run in Localhost
 
-  - Import in  : resources/css/app.css
-      @import '../../node_modules/bootstrap';
-      @import '../../vendor/almasaeed2010/adminlte/dist/css/adminlte.css';
-      @import '../../vendor/components/font-awesome/css/all.min.css';
-
-  - Import in  : resources/js/app.js
-      import "./bootstrap";
-      import "../../vendor/almasaeed2010/adminlte/plugins/jquery/jquery.min.js";
-      import "../../vendor/almasaeed2010/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js";
-      import "../../vendor/almasaeed2010/adminlte/dist/js/adminlte.min.js";
+- Cloning  : `git clone `
+- Install  : `composer install && npm install`
+- Create .env   : `cp .env.example .env` (or copy manualy .env.example to .env)
+- Create key .env   : `php artisan key:generate`
+- Create Database in your MySql database, use GUI.
+- Edit /.env file : DB_DATABASE, DB_USERNAME and DB_PASSWORD According to your environment
+- Migrate Database   : `php artisan migrate`
+- Run host : `php artisan serve`
+- Run dev asset : `npm run dev`
