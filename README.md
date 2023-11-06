@@ -1,8 +1,10 @@
 # Hi Freind !
-This is laravel example kit, hope it can help you.
+This is laravel example kit, hope it can help you. (Laravel version : ^10.10)
+
+# Require
+- php ^8.1
 
 # Run in Localhost
-
 - Cloning  : `git clone https://github.com/sandifb/laravel-example-kit.git`
 - Go to project  : `cd laravel-example-kit`
 - Install  : `composer install && npm install`
