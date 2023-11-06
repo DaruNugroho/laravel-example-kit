@@ -13,5 +13,5 @@ This is laravel example kit, hope it can help you.
 - Migrate Database   : `php artisan migrate`
 - Link Storage Folder to public   : `php artisan storage:link`
 - Run host : `php artisan serve`
-- Run dev assets : `npm run dev`
+- Open new terminal & Run dev assets : `npm run dev`
 - open in browser, by default on [localhost:8000](http://localhost:8000)
