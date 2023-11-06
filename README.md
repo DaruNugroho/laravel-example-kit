@@ -12,4 +12,4 @@ This is laravel example kit, hope it can help you.
 - Migrate Database   : `php artisan migrate`
 - Run host : `php artisan serve`
 - Run dev assets : `npm run dev`
-- open in browser, by default [[Link text Here](http://localhost:8000)](http://localhost:8000)
+- open in browser, by default [[localhost:8000](http://localhost:8000)]
