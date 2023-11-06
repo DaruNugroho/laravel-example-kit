@@ -1,11 +1,11 @@
 <div class="content-wrapper">
 
-    <livewire:comps.title-page title="Home" subTitle="example" :breadcrumb="$breadcrumb" />
+    <livewire:comps.title-page title="Livewire" subTitle="Sitemap" :breadcrumb="$breadcrumb" />
 
     <div class="content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
 
                     <div class="card card-primary card-outline">
                         <div class="card-header">
@@ -37,8 +37,12 @@
                                     <td> Upload & mount form with default value </td>
                                 </tr>
                                 <tr>
-                                    <td> <a href="upload-file" wire:navigate>Export Excel</a></td>
-                                    <td> </td>
+                                    <td> Export to Excel </td>
+                                    <td> <small>coming soon</small> </td>
+                                </tr>
+                                <tr>
+                                    <td> Import form Excel </td>
+                                    <td> <small>coming soon</small> </td>
                                 </tr>
                             </table>
                         </div>
