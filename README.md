@@ -10,6 +10,7 @@ This is laravel example kit, hope it can help you.
 - Create Database in your MySql database, use GUI.
 - Edit .env file : DB_DATABASE, DB_USERNAME and DB_PASSWORD According your environment
 - Migrate Database   : `php artisan migrate`
+- Link Storage dir to public   : `php artisan storage:link`
 - Run host : `php artisan serve`
 - Run dev assets : `npm run dev`
 - open in browser, by default on [localhost:8000](http://localhost:8000)
