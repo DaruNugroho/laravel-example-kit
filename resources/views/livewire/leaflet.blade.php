@@ -41,7 +41,7 @@
                                 </div>
                             </div>
                             <div id="mapUpdateMarker" style="height: 300px;" wire:ignore></div>
-                            <button type="button" class="btn btn-outline-primary btn-xs mt-3" id="btnGetLoc">Your
+                            <button type="button" class="btn btn-outline-primary btn-xs mt-3" id="btnGetLoc">Set Your
                                 Current
                                 Location</button>
                         </div>
