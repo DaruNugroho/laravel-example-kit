@@ -13,6 +13,8 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    @stack('styles')
+
 </head>
 
 <body class="hold-transition layout-top-nav">
@@ -216,6 +218,7 @@
     </div>
 
     @livewireScripts
+    @stack('scripts')
 
     <script type="text/javascript">
         Livewire.on('closeDialog', dialogId => {

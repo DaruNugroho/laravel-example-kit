@@ -37,6 +37,10 @@
                                     <td> Upload & mount form with default value </td>
                                 </tr>
                                 <tr>
+                                    <td> <a href="leaflet" wire:navigate>Leaflet</a></td>
+                                    <td> Leaflet Mep </td>
+                                </tr>
+                                <tr>
                                     <td> Export to Excel </td>
                                     <td> <small>coming soon</small> </td>
                                 </tr>
