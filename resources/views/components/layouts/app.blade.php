@@ -22,7 +22,7 @@
 
         <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
             <div class="container">
-                <a href="{{ url('/') }}" wire:navigate class="navbar-brand">
+                <a href="{{ url('/') }}" class="navbar-brand">
                     {{-- <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                         class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
                     <span class="brand-text font-weight-light">Laravel Example Kit </span>
@@ -37,21 +37,19 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a href="{{ url('livewire/home') }}" wire:navigate class="nav-link">Livewire Sitemap</a>
+                            <a href="{{ url('livewire/home') }}" class="nav-link">Livewire Sitemap</a>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false" class="nav-link dropdown-toggle"> Example Page </a>
                             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                                <li><a href="{{ url('livewire/crud') }}" wire:navigate class="dropdown-item">Basic CRUD
+                                <li><a href="{{ url('livewire/crud') }}" class="dropdown-item">Basic CRUD
                                     </a></li>
-                                <li><a href="{{ url('livewire/crud-dialog') }}" wire:navigate class="dropdown-item">CRUD
+                                <li><a href="{{ url('livewire/crud-dialog') }}" class="dropdown-item">CRUD
                                         Dialog</a>
-                                <li><a href="{{ url('livewire/upload-file') }}" wire:navigate
-                                        class="dropdown-item">Upload File</a>
-                                <li><a href="{{ url('livewire/upload-file') }}" wire:navigate
-                                        class="dropdown-item">Expor Import
+                                <li><a href="{{ url('livewire/upload-file') }}" class="dropdown-item">Upload File</a>
+                                <li><a href="{{ url('livewire/upload-file') }}" class="dropdown-item">Expor Import
                                         Excel</a>
                                 </li>
                                 <li class="dropdown-divider"></li>
