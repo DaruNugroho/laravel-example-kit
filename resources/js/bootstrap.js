@@ -8,6 +8,10 @@ import "bootstrap";
 import swal from "sweetalert2";
 window.Swal = swal;
 
+import $ from "jquery";
+window.jQuery = $;
+window.$ = $;
+
 import axios from "axios";
 window.axios = axios;
 

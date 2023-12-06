@@ -38,8 +38,8 @@
                                             <td>{{ $item->qty }} </td>
                                             <td>{{ $item->expiry_date }} </td>
                                             <td>
-                                                <button class="btn btn-xs btn-outline-primary" data-toggle="modal"
-                                                    data-target="#dialogForm"
+                                                <button class="btn btn-xs btn-outline-primary" 
+                                                data-toggle="modal" data-target="#dialogForm"
                                                     wire:click.prevent="edit('{{ $item->id }}')"
                                                     class="btn btn-sm btn-primary">Edit
                                                 </button>

@@ -5,6 +5,7 @@
 # Install Admin LTE & Font Awesome
   - composer require "almasaeed2010/adminlte=~3.2"
   - composer require components/font-awesome
+  - npm install sweetalert2
 
   - Import in  : resources/css/app.css
       @import '../../node_modules/bootstrap';

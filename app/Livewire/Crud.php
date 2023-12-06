@@ -26,11 +26,27 @@ class Crud extends Component
             'expiry_date'   => 'required|date',
         ]);
 
-        Product::create([
-            'name' => $this->name,
-            'qty' => $this->qty,
-            'expiry_date' => $this->expiry_date,
-        ]);
+        // // Method 1
+        // Product::create(
+        //     $this->only(['name', 'qty', 'expiry_date'])
+        // );
+
+        // // Method 2
+        // Product::create([
+        //     'name'          => $this->name,
+        //     'qty'           => $this->qty,
+        //     'expiry_date'   => $this->expiry_date,
+        // ]);
+
+        // Method 3
+        $product = new Product;
+        $product->name  = $this->name;
+        $product->qty   = $this->qty;
+        if ($this->expiry_date) {
+            $product->expiry_date = $this->expiry_date;
+        }
+        $product->save();
+
 
         $this->resetForm();
     }

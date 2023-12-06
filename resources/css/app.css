@@ -1,3 +1,115 @@
-@import '../../node_modules/bootstrap';
-@import '../../vendor/components/font-awesome/css/all.min.css';
-@import '../../vendor/almasaeed2010/adminlte/dist/css/adminlte.css';
+@import '/public/assets/plugins/fontawesome-free/css/all.min.css';
+
+@media only screen and (max-width: 767px) {
+    .hide-sm {
+        display: none;
+    }
+
+    .sm-mt-2 {
+        margin-top: 20px;
+    }
+}
+
+.pagination {
+    margin-bottom: 0px;
+}
+
+
+
+.form-floating>label {
+    font-weight: normal !important;
+}
+
+/* https://www.jquery-az.com/bootstrap4/demo2.php?ex=94.0_4 */
+.border-lable-flt {
+    display: block;
+    position: relative;
+}
+
+.border-lable-flt label,
+.border-lable-flt>span {
+    font-weight: normal !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: text;
+    font-size: 13px;
+    opacity: 1;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    top: -.5em;
+    left: 0.75rem;
+    z-index: 3;
+    line-height: 1;
+    padding: 0 1px;
+    background-color: white;
+}
+
+.border-lable-flt label::after,
+.border-lable-flt>span::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    background: white;
+    height: 2px;
+    top: 50%;
+    left: -.2em;
+    right: -.2em;
+    z-index: -1;
+}
+
+.border-lable-flt .form-control::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.border-lable-flt .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.border-lable-flt .form-control:placeholder-shown:not(:focus)+* {
+    font-size: 16px;
+    opacity: .5;
+    top: .6em;
+}
+
+/* .input-group .border-lable-flt {
+    display: table-cell;
+    width: 95%;
+}
+
+.input-group .border-lable-flt .form-control {
+    border-radius: 0.25rem;
+}
+
+.input-group .border-lable-flt:not(:last-child),
+.input-group .border-lable-flt:not(:last-child) .form-control {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: 0;
+}
+
+.input-group .border-lable-flt:not(:first-child),
+.input-group .border-lable-flt:not(:first-child) .form-control {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+} */
+
+.form-control:focus {
+    color: black;
+    background-color: #fff;
+    /* border-color: skyblue; */
+    /* box-shadow: 0 0 0 0.2rem rgba(0, 102, 51, 0.25); */
+}
+
+
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #4d8c69 !important;
+    border: 1px solid #4d8c69 !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: white !important;
+}

@@ -4,6 +4,7 @@ use App\Livewire\Crud;
 use App\Livewire\CrudDialog;
 use App\Livewire\Home;
 use App\Livewire\Leaflet;
+use App\Livewire\Dompdf;
 use App\Livewire\UploadFile;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,4 @@ Route::get('crud', Crud::class);
 Route::get('crud-dialog', CrudDialog::class);
 Route::get('upload-file', UploadFile::class);
 Route::get('leaflet', Leaflet::class);
+Route::get('dompdf', Dompdf::class);
