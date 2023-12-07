@@ -10,6 +10,8 @@
                 <div class="col-lg-5">
 
 
+                    <a wire:click.prevent="downloadPDF" class="btn btn-default">Download PDF</a>
+
 
                 </div>
             </div>
