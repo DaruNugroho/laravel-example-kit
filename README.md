@@ -1,5 +1,5 @@
 # Hi Freind !
-This is laravel example kit, hope it can help you. (Laravel version : ^10.10)
+This is a laravel example kit, i hope can help you. (Laravel version : ^10.10)
 
 # Require
 - php ^8.1
