@@ -49,9 +49,9 @@
                                 <li><a href="{{ url('livewire/crud-dialog') }}" class="dropdown-item">CRUD
                                         Dialog</a>
                                 <li><a href="{{ url('livewire/upload-file') }}" class="dropdown-item">Upload File</a>
-                                <li><a href="{{ url('livewire/dompdf') }}" class="dropdown-item">Report PDF
+                                    {{-- <li><a href="{{ url('livewire/dompdf') }}" class="dropdown-item">Report PDF
                                         (dompdf)</a>
-                                </li>
+                                </li> --}}
                                 <li class="dropdown-divider"></li>
                                 <li class="dropdown-submenu dropdown-hover">
                                     <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown"
