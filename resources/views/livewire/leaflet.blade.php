@@ -69,66 +69,69 @@
     <script src="{{ asset('assets/js/leflet.fullscreen.js') }}"></script>
 
     <script>
-        //Basic Map
-        var map = L.map('mapBasic').setView([51.505, -0.09], 13);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-        L.marker([51.5, -0.09]).addTo(map).bindPopup('A sample marker.');
+        $(document).ready(function() {
+
+            //Basic Map
+            var map = L.map('mapBasic').setView([51.505, -0.09], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            L.marker([51.5, -0.09]).addTo(map).bindPopup('A sample marker.');
 
 
-        // Map Update Marker
-        var lat = document.getElementById("lat");
-        var lng = document.getElementById("lng");
-        lat.value = 35.10418;
-        lng.value = -106.62987;
-        var options = {
-            center: [35.10418, -106.62987],
-            zoom: 10,
-            fullscreenControl: true,
-            fullscreenControlOptions: {
-                position: 'topleft'
+            // Map Update Marker
+            var lat = document.getElementById("lat");
+            var lng = document.getElementById("lng");
+            lat.value = 35.10418;
+            lng.value = -106.62987;
+            var options = {
+                center: [35.10418, -106.62987],
+                zoom: 10,
+                fullscreenControl: true,
+                fullscreenControlOptions: {
+                    position: 'topleft'
+                }
             }
-        }
 
-        var map = L.map('mapUpdateMarker', options);
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                attribution: 'OSM'
-            })
-            .addTo(map);
-        var myMarker = L.marker([35.10418, -106.6287], {
-                title: "MyPoint",
-                alt: "The Big I",
-                draggable: true
-            })
-            .addTo(map)
-            .on('dragend', function() {
-                var latMarker = myMarker.getLatLng().lat;
-                var lngMarker = myMarker.getLatLng().lng;
-                lat.value = latMarker;
-                lng.value = lngMarker;
-                myMarker.bindPopup("Moved to: " + latMarker + ", " + lngMarker + ".");
-            });
+            var map = L.map('mapUpdateMarker', options);
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                    attribution: 'OSM'
+                })
+                .addTo(map);
+            var myMarker = L.marker([35.10418, -106.6287], {
+                    title: "MyPoint",
+                    alt: "The Big I",
+                    draggable: true
+                })
+                .addTo(map)
+                .on('dragend', function() {
+                    var latMarker = myMarker.getLatLng().lat;
+                    var lngMarker = myMarker.getLatLng().lng;
+                    lat.value = latMarker;
+                    lng.value = lngMarker;
+                    myMarker.bindPopup("Moved to: " + latMarker + ", " + lngMarker + ".");
+                });
 
-        L.DomEvent.on(document.getElementById('btnGetLoc'), 'click', function() {
-            map.locate({
-                setView: true,
-                maxZoom: 16
-            }).on("locationfound", e => {
-                if (!myMarker) {
-                    myMarker = new L.marker(e.latlng).addTo(this.map);
-                } else {
-                    myMarker.setLatLng(e.latlng);
-                }
-                var latMarker = myMarker.getLatLng().lat;
-                var lngMarker = myMarker.getLatLng().lng;
-                lat.value = latMarker;
-                lng.value = lngMarker;
-            }).on("locationerror", error => {
-                if (myMarker) {
-                    map.removeLayer(marker);
-                    myMarker = undefined;
-                }
+            L.DomEvent.on(document.getElementById('btnGetLoc'), 'click', function() {
+                map.locate({
+                    setView: true,
+                    maxZoom: 16
+                }).on("locationfound", e => {
+                    if (!myMarker) {
+                        myMarker = new L.marker(e.latlng).addTo(this.map);
+                    } else {
+                        myMarker.setLatLng(e.latlng);
+                    }
+                    var latMarker = myMarker.getLatLng().lat;
+                    var lngMarker = myMarker.getLatLng().lng;
+                    lat.value = latMarker;
+                    lng.value = lngMarker;
+                }).on("locationerror", error => {
+                    if (myMarker) {
+                        map.removeLayer(marker);
+                        myMarker = undefined;
+                    }
+                });
             });
         });
     </script>
