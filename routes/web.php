@@ -1,6 +1,11 @@
 <?php
 
-use App\Http\Controllers\DompdfController;
+use App\Http\Controllers\Admin\{
+    DompdfController,
+    ExcelController,
+    HomeController
+};
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +22,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/dompdf', [DompdfController::class, 'index']);
+
+Auth::routes();
+
+
+Route::prefix('admin')->group(function () {
+    //Home
+    Route::get('home',          [HomeController::class, 'index'])->name('home');
+
+    //PDF
+    Route::get('dompdf',        [DompdfController::class, 'index']);
+    Route::get('dompdf/{id}',   [DompdfController::class, 'show']);
+
+    //Excel
+    Route::get('excel',         [ExcelController::class, 'index']);
+    Route::get('excel/{id}',    [ExcelController::class, 'show']);
+});

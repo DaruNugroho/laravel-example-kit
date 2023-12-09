@@ -1,28 +1,18 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Product;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class DompdfController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $products = Product::all();
-        $data = ['products' => $products];
-
-        $pdf = app('dompdf.wrapper');
-        $pdf->setOptions([
-            'isPhpEnabled' => true,
-            'isRemoteEnabled' => true
-        ]);
-        $pdf->loadView('product_pdf', $data);
-
-        return $pdf->stream('report-product' . '.pdf');
+        return view('admin.home');
     }
 
     /**

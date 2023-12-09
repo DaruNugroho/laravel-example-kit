@@ -1,11 +1,11 @@
 // Fonts
 @import url('https://fonts.bunny.net/css?family=Nunito');
 
+//bootstrap
+@import 'bootstrap/scss/bootstrap';
+
 // Variables
 @import 'variables';
-
-// Bootstrap
-@import 'bootstrap/scss/bootstrap';
 
 // adminlte
 @import '/public/assets/scss/adminlte.scss';

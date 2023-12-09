@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js'])
+    <link href="{{ asset('assets/plugins/sweetalert2/sweetalert2.css') }}" rel="stylesheet">
 
     @stack('styles')
 
@@ -214,6 +215,8 @@
             reserved.
         </footer>
     </div>
+
+    <script src="{{ asset('assets/plugins/sweetalert2/sweetalert2.js') }}"></script>
 
     @livewireScripts
     @stack('scripts')
