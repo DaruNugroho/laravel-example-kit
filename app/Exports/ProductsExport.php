@@ -12,7 +12,6 @@ class ProductsExport implements FromGenerator
 {
     use Exportable;
 
-
     protected $id;
 
     function __construct($id)

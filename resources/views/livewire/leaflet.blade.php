@@ -26,15 +26,18 @@
                             <h5 class="card-title m-0"> Map Update Marker </h5>
                         </div>
                         <div class="card-body">
-                            <div class="form-group form-floating row">
+
+
+
+                            <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <div class="form-floating">
+                                    <div class="border-lable-flt">
                                         <input type="text" class="form-control" id="lat" placeholder="lat">
                                         <label for="lat" class="form-label">lat</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="form-floating">
+                                    <div class="border-lable-flt">
                                         <input type="text" class="form-control" id="lng" placeholder="lng">
                                         <label for="lng" class="form-label">lng</label>
                                     </div>
@@ -64,11 +67,12 @@
 </div>
 
 @push('scripts')
+    <!-- Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="{{ asset('assets/js/leflet.fullscreen.js') }}"></script>
 
-    <script>
+    <script type="module">
         $(document).ready(function() {
 
             //Basic Map
@@ -133,6 +137,7 @@
                     }
                 });
             });
+
         });
     </script>
 @endpush

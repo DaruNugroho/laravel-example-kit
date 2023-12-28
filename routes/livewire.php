@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Autocomplete;
 use App\Livewire\Crud;
 use App\Livewire\CrudDialog;
 use App\Livewire\Home;
@@ -30,4 +31,4 @@ Route::get('crud', Crud::class);
 Route::get('crud-dialog', CrudDialog::class);
 Route::get('upload-file', UploadFile::class);
 Route::get('leaflet', Leaflet::class);
-Route::get('dompdf', Dompdf::class);
+Route::get('autocomplete', Autocomplete::class);

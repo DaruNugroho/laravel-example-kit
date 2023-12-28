@@ -24,25 +24,25 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="crud" wire:navigate>Basic CRUD</a>
+                                        <a href="crud">Basic CRUD</a>
                                     </td>
                                     <td>Simple CRUD with Validation </td>
                                 </tr>
                                 <tr>
-                                    <td> <a href="crud-dialog" wire:navigate>Crud With Dialog</a></td>
+                                    <td> <a href="crud-dialog">Crud With Dialog</a></td>
                                     <td> Dialog Form with Notify </td>
                                 </tr>
                                 <tr>
-                                    <td> <a href="upload-file" wire:navigate>Upload File</a></td>
+                                    <td> <a href="upload-file">Upload File</a></td>
                                     <td> Upload & mount form with default value </td>
                                 </tr>
                                 <tr>
-                                    <td> <a href="leaflet" wire:navigate>Leaflet</a></td>
+                                    <td> <a href="leaflet">Leaflet</a></td>
                                     <td> Leaflet Mep </td>
                                 </tr>
                                 <tr>
-                                    <td> Export to Excel </td>
-                                    <td> <small>coming soon</small> </td>
+                                    <td> <a href="autocomplete">Autocomplete</a> </td>
+                                    <td> Autocomplete </td>
                                 </tr>
                                 <tr>
                                     <td> Import form Excel </td>
