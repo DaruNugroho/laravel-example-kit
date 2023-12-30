@@ -164,8 +164,8 @@
                 content = this.options.content;
             } else {
                 // className += " fullscreen-icon";
-                // className += " fa-solid fa-expand";
-                className += " fa fa-compress";
+                // className += " fas fa-compress";
+                className += " fas fa-expand";
             }
 
             this._createButton(
@@ -276,6 +276,7 @@
             var map = this._map;
             map._exitFired = false;
             if (map._isFullscreen) {
+                // console.log("set classname : fas fa-expand ");
                 if (
                     this._screenfull.isEnabled &&
                     !this.options.forcePseudoFullscreen
@@ -294,6 +295,7 @@
                 map._exitFired = true;
                 map._isFullscreen = false;
             } else {
+                // console.log("set classname : fas fa-compress ");
                 if (
                     this._screenfull.isEnabled &&
                     !this.options.forcePseudoFullscreen
@@ -324,6 +326,14 @@
             this._map._isFullscreen
                 ? L.DomUtil.removeClass(this.link, "leaflet-fullscreen-on")
                 : L.DomUtil.addClass(this.link, "leaflet-fullscreen-on");
+
+            if (!this._map._isFullscreen) {
+                L.DomUtil.removeClass(this.link, "fa-expand");
+                L.DomUtil.addClass(this.link, "fa-compress");
+            } else {
+                L.DomUtil.removeClass(this.link, "fa-compress");
+                L.DomUtil.addClass(this.link, "fa-expand");
+            }
         },
 
         _handleFullscreenChange: function () {

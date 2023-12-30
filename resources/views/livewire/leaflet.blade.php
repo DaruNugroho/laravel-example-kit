@@ -3,7 +3,7 @@
 @push('styles')
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="{{ asset('assets/css/leflet.fullscreen.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/plugins/leaflet/leaflet.fullscreen.css') }}" />
 
     <style>
         .form-floating>label {
@@ -27,8 +27,6 @@
                         </div>
                         <div class="card-body">
 
-
-
                             <div class="form-group row">
                                 <div class="col-sm-6">
                                     <div class="border-lable-flt">
@@ -43,6 +41,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div id="mapUpdateMarker" style="height: 300px;" wire:ignore></div>
                             <button type="button" class="btn btn-outline-primary btn-xs mt-3" id="btnGetLoc">Set Your
                                 Current
@@ -57,6 +56,8 @@
                             <h3 class="card-title">Basic Map - Show Marker </h3>
                         </div>
                         <div id="mapBasic" style="height: 300px;" wire:ignore></div>
+
+
                     </div>
                 </div>
 
@@ -70,7 +71,7 @@
     <!-- Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="{{ asset('assets/js/leflet.fullscreen.js') }}"></script>
+    <script src="{{ asset('assets/plugins/leaflet/leaflet.fullscreen.js') }}"></script>
 
     <script type="module">
         $(document).ready(function() {

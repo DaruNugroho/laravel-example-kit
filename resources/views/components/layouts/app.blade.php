@@ -16,6 +16,8 @@
 
     @stack('styles')
 
+    @stack('scripts')
+
 </head>
 
 <body class="hold-transition layout-top-nav">
@@ -219,7 +221,6 @@
     <script src="{{ asset('assets/plugins/sweetalert2/sweetalert2.js') }}"></script>
 
     @livewireScripts
-    @stack('scripts')
 
     <script type="text/javascript">
         Livewire.on('closeDialog', dialogId => {
